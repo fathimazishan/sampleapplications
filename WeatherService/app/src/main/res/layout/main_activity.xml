@@ -1,0 +1,153 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:ignore="MergeRootFrame"
+    android:weightSum="1"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Please enter the name of a city" >
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/formLinearLayout"
+        android:focusableInTouchMode="false">
+      <Button
+         android:id="@+id/button1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:onClick="getWeatherSync"
+         android:text="Get Weather Sync" />
+
+      <Button
+         android:id="@+id/button2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:onClick="getWeatherAsync"
+         android:text="Get Weather Async" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.18"
+        android:id="@+id/resultLinearLayout"
+        android:paddingTop="20dp"
+        android:orientation="vertical">
+
+     <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:id="@+id/cityTextView"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/countryTextView"
+            />
+       </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:text="Today"
+          android:id="@+id/dayTextView"
+           />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature:"
+            android:id="@+id/temperatureTextView"
+
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/currentTemperatureTextView"
+             />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Humidity:"
+          android:id="@+id/humidityTextView"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+
+          android:id="@+id/currentHumidityTextView"
+          />
+       </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wind Speed:"
+            android:id="@+id/windSpeedTextView"
+
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/currentWindSpeedTextView"
+
+            />
+         </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
